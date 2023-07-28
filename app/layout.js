@@ -1,12 +1,9 @@
 "use client";
 
 import './globals.css';
-
-import { metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ClientRootLayout } from "./client-layout";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +14,6 @@ export const metadata = {
 
 function RootLayout({ children }) {
   return (
-    <ClientRootLayout>
     <html lang="en">
       <body className={inter.className}>
       <Navbar/>
@@ -25,7 +21,6 @@ function RootLayout({ children }) {
       <Footer/>
       </body>
     </html>
-    </ClientRootLayout>
   )
 }
 
